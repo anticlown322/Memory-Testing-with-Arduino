@@ -1,0 +1,78 @@
+Unit uVCLInputForm;
+
+Interface
+
+Uses
+    Winapi.Windows,
+    Winapi.Messages,
+    System.SysUtils,
+    System.Variants,
+    System.Classes,
+    Vcl.Graphics,
+    Vcl.Controls,
+    Vcl.Forms,
+    Vcl.Dialogs,
+    Vcl.ExtCtrls,
+    System.ImageList,
+    Vcl.ImgList,
+    Vcl.VirtualImageList,
+    Vcl.Buttons,
+    Vcl.StdCtrls;
+
+Type
+    TfrmInput = Class(TForm)
+        PBackground: TPanel;
+        SdbtClose: TSpeedButton;
+        VilImages48: TVirtualImageList;
+        EInput: TEdit;
+        LbInputRequirement: TLabel;
+        BtSubmit: TButton;
+        BtCancel: TButton;
+        Procedure FormCreate(Sender: TObject);
+        Procedure SdbtCloseClick(Sender: TObject);
+        Procedure BtCancelClick(Sender: TObject);
+        Procedure BtSubmitClick(Sender: TObject);
+    Private
+        SenderButtonTag: Integer;
+    End;
+
+Var
+    FrmInput: TfrmInput;
+
+Implementation
+
+{$R *.dfm}
+
+Uses
+    UdtmdData,
+    UVCLMain;
+
+{ Form }
+
+Procedure TfrmInput.FormCreate(Sender: TObject);
+Var
+    Rgn: HRGN;
+Begin
+    Rgn := CreateRoundRectRgn(0, 0, ClientWidth, ClientHeight, 70, 70);
+    SetWindowRgn(Handle, Rgn, True);
+End;
+
+{ Buttons }
+
+Procedure TfrmInput.SdbtCloseClick(Sender: TObject);
+Begin
+    Close;
+End;
+
+Procedure TfrmInput.BtCancelClick(Sender: TObject);
+Begin
+    Close;
+End;
+
+Procedure TfrmInput.BtSubmitClick(Sender: TObject);
+Begin
+    FrmMain.Engine.COMPortName := EInput.Text;
+    Close;
+End;
+
+End.

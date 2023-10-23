@@ -1,0 +1,22 @@
+Unit udtmdData;
+
+Interface
+
+Uses
+    System.SysUtils,
+    System.Classes;
+
+Type
+    TDataModule2 = Class(TDataModule)
+
+    End;
+
+Var
+    DataModule2: TDataModule2;
+
+Implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+{$R *.dfm}
+
+End.

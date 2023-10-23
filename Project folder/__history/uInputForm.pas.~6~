@@ -1,0 +1,64 @@
+Unit uInputForm;
+
+Interface
+
+Uses
+    Winapi.Windows,
+    Winapi.Messages,
+    System.SysUtils,
+    System.Variants,
+    System.Classes,
+    Vcl.Graphics,
+    Vcl.Controls,
+    Vcl.Forms,
+    Vcl.Dialogs,
+    Vcl.ExtCtrls,
+    System.ImageList,
+    Vcl.ImgList,
+    Vcl.VirtualImageList,
+    Vcl.Buttons,
+    Vcl.StdCtrls;
+
+Type
+    TfrmInput = Class(TForm)
+        PBackground: TPanel;
+        SdbtClose: TSpeedButton;
+        VilImages48: TVirtualImageList;
+        EInput: TEdit;
+        LbInputRequirement: TLabel;
+        BtSubmit: TButton;
+        BtCancel: TButton;
+        Procedure FormCreate(Sender: TObject);
+    Private
+        SenderButtonTag: Integer;
+    End;
+
+Var
+    FrmInput: TfrmInput;
+
+Implementation
+
+{$R *.dfm}
+
+Uses
+    UdtmdData,
+    UVCLMain;
+
+Procedure TfrmInput.FormCreate(Sender: TObject);
+Begin
+    SenderButtonTag := (Sender As TSpeedButton).Tag;
+    Case SenderButtonTag Of
+        1:
+            LbInputRequirement.Caption := '¬ведите название порта';
+        2:
+            LbInputRequirement.Caption := '¬ведите название порта';
+        3:
+            LbInputRequirement.Caption := '¬ведите название порта';
+        4:
+            LbInputRequirement.Caption := '¬ведите название порта';
+        5:
+            LbInputRequirement.Caption := '¬ведите название порта';
+    End;
+End;
+
+End.

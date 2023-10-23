@@ -1,0 +1,30 @@
+unit uInputForm;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, System.ImageList,
+  Vcl.ImgList, Vcl.VirtualImageList, Vcl.Buttons, Vcl.StdCtrls;
+
+type
+  TfrmInput = class(TForm)
+    pBackground: TPanel;
+    sdbtClose: TSpeedButton;
+    vilImages48: TVirtualImageList;
+    eInput: TEdit;
+    lbInputRequirement: TLabel;
+    btSubmit: TButton;
+    btCancel: TButton;
+  end;
+
+var
+  frmInput: TfrmInput;
+
+implementation
+
+{$R *.dfm}
+
+uses udtmdData, uVCLMain;
+
+end.

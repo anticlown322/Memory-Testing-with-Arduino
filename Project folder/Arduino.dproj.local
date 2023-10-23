@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.968,=D:\DelphiProjects\Arduino\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.359,=D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.709,=D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.708,D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\Unit1.pas=D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\uInputForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.610,D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\Unit1.pas=D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\uVCLSettings.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.667,D:\DelphiProjects\Arduino\Arduino.dproj=D:\DelphiProjects\Embarcadero\Arduino.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.792,D:\DelphiProjects\Arduino\udtmdData.pas=D:\DelphiProjects\Arduino\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.206,D:\DelphiProjects\Embarcadero\Arduino.dproj=D:\DelphiProjects\Embarcadero\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.475,=D:\DelphiProjects\Arduino\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.303,=D:\DelphiProjects\Embarcadero\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.311,D:\DelphiProjects\Arduino\uEngine.pas=D:\DelphiProjects\Arduino\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.792,D:\DelphiProjects\Arduino\udtmdData.dfm=D:\DelphiProjects\Arduino\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.708,D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\Unit1.dfm=D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\uInputForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.610,D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\Unit1.dfm=D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\uVCLSettings.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.479,D:\DelphiProjects\Embarcadero\uVCLMain.dfm=D:\DelphiProjects\Embarcadero\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.479,D:\DelphiProjects\Embarcadero\uVCLMain.pas=D:\DelphiProjects\Embarcadero\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.858,D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\uInputForm.pas=D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\uVCLInputForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.818,D:\DelphiProjects\Arduino\uVCLMain.dfm=D:\DelphiProjects\Embarcadero\uVCLMain.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.818,D:\DelphiProjects\Arduino\uVCLMain.pas=D:\DelphiProjects\Embarcadero\uVCLMain.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.858,D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\uInputForm.dfm=D:\DelphiProjects\Arduino-COMPort-Testing\Project folder\uVCLInputForm.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

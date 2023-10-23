@@ -1,0 +1,19 @@
+program Arduino;
+
+uses
+  Vcl.Forms,
+  uVCLMain in 'uVCLMain.pas' {frmMain},
+  uEngine in 'uEngine.pas',
+  udtmdData in 'udtmdData.pas' {dtmdData: TDataModule},
+  uInputForm in 'uInputForm.pas' {frmInput};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TdtmdData, dtmdData);
+  Application.CreateForm(TfrmInput, frmInput);
+  Application.Run;
+end.

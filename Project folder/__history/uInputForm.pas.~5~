@@ -1,0 +1,59 @@
+Unit uInputForm;
+
+Interface
+
+Uses
+    Winapi.Windows,
+    Winapi.Messages,
+    System.SysUtils,
+    System.Variants,
+    System.Classes,
+    Vcl.Graphics,
+    Vcl.Controls,
+    Vcl.Forms,
+    Vcl.Dialogs,
+    Vcl.ExtCtrls,
+    System.ImageList,
+    Vcl.ImgList,
+    Vcl.VirtualImageList,
+    Vcl.Buttons,
+    Vcl.StdCtrls;
+
+Type
+    TfrmInput = Class(TForm)
+        PBackground: TPanel;
+        SdbtClose: TSpeedButton;
+        VilImages48: TVirtualImageList;
+        EInput: TEdit;
+        LbInputRequirement: TLabel;
+        BtSubmit: TButton;
+        BtCancel: TButton;
+        Procedure FormCreate(Sender: TObject);
+    End;
+
+Var
+    FrmInput: TfrmInput;
+
+Implementation
+
+{$R *.dfm}
+
+Uses
+    UdtmdData,
+    UVCLMain;
+
+Procedure TfrmInput.FormCreate(Sender: TObject);
+Begin
+    Case (Sender As TSpeedButton).Tag Of
+        1:
+            Begin
+
+            End;
+        2:
+        3:
+        4:
+        5:
+        End;
+    End;
+
+End.

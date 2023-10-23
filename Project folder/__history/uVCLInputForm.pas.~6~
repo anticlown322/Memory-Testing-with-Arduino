@@ -1,0 +1,72 @@
+Unit uVCLInputForm;
+
+Interface
+
+Uses
+    Winapi.Windows,
+    Winapi.Messages,
+    System.SysUtils,
+    System.Variants,
+    System.Classes,
+    Vcl.Graphics,
+    Vcl.Controls,
+    Vcl.Forms,
+    Vcl.Dialogs,
+    Vcl.ExtCtrls,
+    System.ImageList,
+    Vcl.ImgList,
+    Vcl.VirtualImageList,
+    Vcl.Buttons,
+    Vcl.StdCtrls;
+
+Type
+    TfrmInput = Class(TForm)
+        PBackground: TPanel;
+        SdbtClose: TSpeedButton;
+        VilImages48: TVirtualImageList;
+        EInput: TEdit;
+        LbInputRequirement: TLabel;
+        BtSubmit: TButton;
+        BtCancel: TButton;
+        Procedure FormCreate(Sender: TObject);
+        Procedure SdbtCloseClick(Sender: TObject);
+        Procedure BtCancelClick(Sender: TObject);
+    Private
+        SenderButtonTag: Integer;
+    End;
+
+Var
+    FrmInput: TfrmInput;
+
+Implementation
+
+{$R *.dfm}
+
+Uses
+    UdtmdData,
+    UVCLMain;
+
+Procedure TfrmInput.FormCreate(Sender: TObject);
+Var
+    Rgn: HRGN;
+Begin
+    Rgn := CreateRoundRectRgn(0, //x-coordinate of the region's upper-left corner
+        0, //y-coordinate of the region's upper-left corner
+        ClientWidth, //x-coordinate of the region's lower-right corner
+        ClientHeight, //y-coordinate of the region's lower-right corner
+        70, //height of ellipse for rounded corners
+        70); //width of ellipse for rounded corners
+    SetWindowRgn(Handle, Rgn, True);
+End;
+
+Procedure TfrmInput.SdbtCloseClick(Sender: TObject);
+Begin
+    Close;
+End;
+
+Procedure TfrmInput.BtCancelClick(Sender: TObject);
+Begin
+    Close;
+End;
+
+End.
