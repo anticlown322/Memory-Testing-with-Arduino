@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.30  D:\CodeVisionAVR\Projects\arduimo nano\Debug\List\arduino proj.asm Wed Oct 25 10:41:56 2023
+AVRASM ver. 2.1.30  D:\”чеба\ƒисциплины\ј “иќ—\Arduino-Nano\firmware project\Debug\List\arduino proj.asm Thu Oct 26 13:22:28 2023
 
                  
                  
@@ -1203,9 +1203,9 @@ AVRASM ver. 2.1.30  D:\CodeVisionAVR\Projects\arduimo nano\Debug\List\arduino pr
                  ; 0000 000E i = i ^ 1;
 000053 e0e1      	LDI  R30,LOW(1)
 000054 270e      	EOR  R16,R30
-                 ; 0000 000F delay_ms(1000);
-000055 eea8      	LDI  R26,LOW(1000)
-000056 e0b3      	LDI  R27,HIGH(1000)
+                 ; 0000 000F delay_ms(200);
+000055 eca8      	LDI  R26,LOW(200)
+000056 e0b0      	LDI  R27,0
 000057 940e 0082 	CALL _delay_ms
                  ; 0000 0010 PORTB = (i<<PORTB7)|(i<<PORTB6)|(i<<PORTB5)|(i<<PORTB4)|(i<<PORTB3)|(i<<PORTB2)| ...
 000059 2fe0      	MOV  R30,R16

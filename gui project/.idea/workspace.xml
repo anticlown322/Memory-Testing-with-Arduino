@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3ad25a7c-57f7-498b-bb44-02ee5aa63288" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gui project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Arduino.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/Exe/arduino proj.elf" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/Exe/arduino proj.elf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/Exe/arduino proj.hex" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/Exe/arduino proj.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/Exe/arduino proj.rom" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/Exe/arduino proj.rom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/Link/arduino proj.a" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/Link/arduino proj.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/Link/arduino proj.o" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/Link/arduino proj.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/List/arduino proj.asm" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/List/arduino proj.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/List/arduino proj.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/List/arduino proj.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.cof" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.cof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.sym1" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.sym1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.sym2" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.sym2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.sym3" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/Debug/arduino proj.sym3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/arduino proj.c" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/arduino proj.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/arduino proj.cci" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/arduino proj.cci" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/arduino proj.cof" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/arduino proj.cof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firmware project/arduino proj.prj" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/arduino proj.prj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,24 +42,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2XDgrCyJl3rQpGPKoyjdGpxVm29" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "develop-Andrei-Karas",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop-Andrei-Karas&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
