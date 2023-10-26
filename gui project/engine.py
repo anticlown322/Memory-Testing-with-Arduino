@@ -1,6 +1,3 @@
-# engine.py
-
-
 import serial
 import serial.tools.list_ports
 
@@ -89,7 +86,3 @@ def mainProc():
 
     except Exception as e:
         print("Ошибка:", str(e))
-
-
-
-mainProc()
