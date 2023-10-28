@@ -60,7 +60,7 @@ def mainProc():
         ports = serial.tools.list_ports.comports()
         portPointer = next((p.device for p in ports), None)
         if portPointer is None:
-            raise ValueError("No COM port found.")
+            raise ValueError("COM-порты не найдены.")
         else:
             for port in ports:
                 print(port.device)
@@ -86,3 +86,7 @@ def mainProc():
 
     except Exception as e:
         print("Ошибка:", str(e))
+
+
+
+mainProc()
