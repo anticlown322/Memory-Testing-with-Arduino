@@ -1196,9 +1196,9 @@ _0x3:
 ; 0000 000E i = i ^ 1;
 	LDI  R30,LOW(1)
 	EOR  R16,R30
-; 0000 000F delay_ms(1000);
-	LDI  R26,LOW(1000)
-	LDI  R27,HIGH(1000)
+; 0000 000F delay_ms(200);
+	LDI  R26,LOW(200)
+	LDI  R27,0
 	CALL _delay_ms
 ; 0000 0010 PORTB = (i<<PORTB7)|(i<<PORTB6)|(i<<PORTB5)|(i<<PORTB4)|(i<<PORTB3)|(i<<PORTB2)| ...
 	MOV  R30,R16

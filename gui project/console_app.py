@@ -1,6 +1,3 @@
-# engine.py
-
-
 import serial
 import serial.tools.list_ports
 
@@ -63,7 +60,7 @@ def mainProc():
         ports = serial.tools.list_ports.comports()
         portPointer = next((p.device for p in ports), None)
         if portPointer is None:
-            raise ValueError("No COM port found.")
+            raise ValueError("COM-порты не найдены.")
         else:
             for port in ports:
                 print(port.device)
