@@ -13,4 +13,5 @@ Variable                                                                        
 FLASH Allocation [words]
 Function                                                                          Address   Size
 ------------------------------------------------------------------------------------------------
-main                                                                              0x00051     49
+writeZeroCycle                                                                    0x00051     93
+main                                                                              0x000AE      2

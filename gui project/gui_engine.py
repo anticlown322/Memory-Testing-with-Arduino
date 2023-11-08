@@ -1,10 +1,10 @@
 import serial
 import serial.tools.list_ports
 
-def fastPortsCheck():
+
+def find_available_ports():
     ports = serial.tools.list_ports.comports()
-    for port in ports:
-        print(port.device)
+    return ports
 
 
 def sendInfo(ser):
@@ -27,24 +27,21 @@ def sendInfo(ser):
 
 
 def getInfo(ser):
+    lines = []
     try:
         while True:
             line = ser.readline().decode().strip()
 
             if line:
-                print("Полученная строка:", line)
-
-    except KeyboardInterrupt:
-        print('Цикл передачи прерван.')
-        pass
+                lines.append(line)
 
     except serial.SerialException as se:
-        print("Ошибка последовательного порта:", str(se))
+        lines.append("Ошибка последовательного порта: " + str(se))
 
     finally:
         if ser.is_open:
             ser.close()
-            print("Последовательное соединение прервано.")
+            lines.append("Последовательное соединение прервано.")
 
 
 def mainProc():

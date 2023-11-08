@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3ad25a7c-57f7-498b-bb44-02ee5aa63288" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firmware project/arduino proj.prj" beforeDir="false" afterPath="$PROJECT_DIR$/../firmware project/arduino proj.prj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/console_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/console_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/console_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui_engine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
