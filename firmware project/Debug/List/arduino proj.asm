@@ -1182,69 +1182,168 @@ __CLEAR_SRAM:
 	.EQU __sm_ext_standby=0x0E
 	.SET power_ctrl_reg=smcr
 	#endif
-;void main(void) {
-; 0000 000B void main(void) {
+;A1 = offset & 0b00000000000000000000000000000010; \
+;A2 = offset & 0b00000000000000000000000000000100; \
+;A3 = offset & 0b00000000000000000000000000001000; \
+;A4 = offset & 0b00000000000000000000000000010000; \
+;A5 = offset & 0b00000000000000000000000000100000; \
+;A6 = offset & 0b00000000000000000000000001000000; \
+;A7 = offset & 0b00000000000000000000000010000000; \
+;A8 = offset & 0b00000000000000000000000100000000; \
+;A9 = offset & 0b00000000000000000000001000000000; \
+;A10 = offset & 0b00000000000000000000010000000000; \
+;A11 = offset & 0b00000000000000000000100000000000;
+;void writeZeroCycle(){
+; 0000 0022 void writeZeroCycle(){
 
 	.CSEG
-_main:
-; .FSTART _main
-; 0000 000C int i = 0;
-; 0000 000D while(1){
-;	i -> R16,R17
+_writeZeroCycle:
+; .FSTART _writeZeroCycle
+; 0000 0023 
+; 0000 0024 unsigned int dataOffset = 0;
+; 0000 0025 
+; 0000 0026 D = 0;
+	ST   -Y,R17
+	ST   -Y,R16
+;	dataOffset -> R16,R17
 	__GETWRN 16,17,0
-_0x3:
-; 0000 000E i = i ^ 1;
-	LDI  R30,LOW(1)
-	EOR  R16,R30
-; 0000 000F delay_ms(200);
-	LDI  R26,LOW(200)
+	CBI  0x8,5
+; 0000 0027 
+; 0000 0028 while (dataOffset < 4096) {
+_0x5:
+	__CPWRN 16,17,4096
+	BRLO PC+2
+	RJMP _0x7
+; 0000 0029 E = 0;
+	CBI  0x5,4
+; 0000 002A 
+; 0000 002B E = 1;
+	SBI  0x5,4
+; 0000 002C W = 0;
+	CBI  0xB,4
+; 0000 002D A(dataOffset)
+	SBRC R16,0
+	RJMP _0xE
+	CBI  0x5,3
+	RJMP _0xF
+_0xE:
+	SBI  0x5,3
+_0xF:
+	SBRC R16,1
+	RJMP _0x10
+	CBI  0x5,2
+	RJMP _0x11
+_0x10:
+	SBI  0x5,2
+_0x11:
+	SBRC R16,2
+	RJMP _0x12
+	CBI  0x5,1
+	RJMP _0x13
+_0x12:
+	SBI  0x5,1
+_0x13:
+	SBRC R16,3
+	RJMP _0x14
+	CBI  0x5,0
+	RJMP _0x15
+_0x14:
+	SBI  0x5,0
+_0x15:
+	SBRC R16,4
+	RJMP _0x16
+	CBI  0x5,5
+	RJMP _0x17
+_0x16:
+	SBI  0x5,5
+_0x17:
+	SBRC R16,5
+	RJMP _0x18
+	CBI  0x8,0
+	RJMP _0x19
+_0x18:
+	SBI  0x8,0
+_0x19:
+	SBRC R16,6
+	RJMP _0x1A
+	CBI  0x8,1
+	RJMP _0x1B
+_0x1A:
+	SBI  0x8,1
+_0x1B:
+	SBRC R16,7
+	RJMP _0x1C
+	CBI  0x8,4
+	RJMP _0x1D
+_0x1C:
+	SBI  0x8,4
+_0x1D:
+	MOV  R30,R16
+	ANDI R30,LOW(0x0)
+	BRNE _0x1E
+	CBI  0x8,3
+	RJMP _0x1F
+_0x1E:
+	SBI  0x8,3
+_0x1F:
+	MOV  R30,R16
+	ANDI R30,LOW(0x0)
+	BRNE _0x20
+	CBI  0x8,2
+	RJMP _0x21
+_0x20:
+	SBI  0x8,2
+_0x21:
+	MOV  R30,R16
+	ANDI R30,LOW(0x0)
+	BRNE _0x22
+	CBI  0xB,7
+	RJMP _0x23
+_0x22:
+	SBI  0xB,7
+_0x23:
+	MOV  R30,R16
+	ANDI R30,LOW(0x0)
+	BRNE _0x24
+	CBI  0xB,6
+	RJMP _0x25
+_0x24:
+	SBI  0xB,6
+_0x25:
+; 0000 002E 
+; 0000 002F W = 1;
+	SBI  0xB,4
+; 0000 0030 delay_ms(5);
+	LDI  R26,LOW(5)
 	LDI  R27,0
 	CALL _delay_ms
-; 0000 0010 PORTB = (i<<PORTB7)|(i<<PORTB6)|(i<<PORTB5)|(i<<PORTB4)|(i<<PORTB3)|(i<<PORTB2)| ...
-	MOV  R30,R16
-	ROR  R30
-	LDI  R30,0
-	ROR  R30
-	MOV  R26,R30
-	MOV  R30,R16
-	SWAP R30
-	ANDI R30,0xF0
-	LSL  R30
-	LSL  R30
-	OR   R30,R26
-	MOV  R26,R30
-	MOV  R30,R16
-	SWAP R30
-	ANDI R30,0xF0
-	LSL  R30
-	OR   R30,R26
-	MOV  R26,R30
-	MOV  R30,R16
-	SWAP R30
-	ANDI R30,0xF0
-	OR   R30,R26
-	MOV  R26,R30
-	MOV  R30,R16
-	LSL  R30
-	LSL  R30
-	LSL  R30
-	OR   R30,R26
-	MOV  R26,R30
-	MOV  R30,R16
-	LSL  R30
-	LSL  R30
-	OR   R30,R26
-	MOV  R26,R30
-	MOV  R30,R16
-	LSL  R30
-	OR   R30,R26
-	OR   R30,R16
-	OUT  0x5,R30
-; 0000 0011 }
-	RJMP _0x3
-; 0000 0012 }
-_0x6:
-	RJMP _0x6
+; 0000 0031 
+; 0000 0032 W = 0;
+	CBI  0xB,4
+; 0000 0033 delay_ms(5);
+	LDI  R26,LOW(5)
+	LDI  R27,0
+	CALL _delay_ms
+; 0000 0034 
+; 0000 0035 dataOffset++;
+	__ADDWRN 16,17,1
+; 0000 0036 }
+	RJMP _0x5
+_0x7:
+; 0000 0037 }
+	LD   R16,Y+
+	LD   R17,Y+
+	RET
+; .FEND
+;void main(void) {
+; 0000 0039 void main(void) {
+_main:
+; .FSTART _main
+; 0000 003A writeZeroCycle();
+	RCALL _writeZeroCycle
+; 0000 003B }
+_0x2A:
+	RJMP _0x2A
 ; .FEND
 
 	.CSEG

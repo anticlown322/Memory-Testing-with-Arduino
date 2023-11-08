@@ -1,1 +1,2 @@
-main DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"arduino proj.c" LINE:11
+main DSTACK_USAGE:0 DSTACK_LEVEL:0 FILE:"arduino proj.c" LINE:57
+writeZeroCycle DSTACK_USAGE:2 DSTACK_LEVEL:2 FILE:"arduino proj.c" LINE:34
