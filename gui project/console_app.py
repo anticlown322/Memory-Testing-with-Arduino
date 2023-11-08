@@ -5,7 +5,7 @@ def fastPortsCheck():
     ports = serial.tools.list_ports.comports()
     print('Текущие доступные порты:')
     for port in ports:
-        print(port.device)
+        print(port.name)
 
 
 def sendInfo(ser):

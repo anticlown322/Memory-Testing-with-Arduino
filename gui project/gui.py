@@ -1,5 +1,6 @@
 import customtkinter
 import tkinter
+from gui_engine import find_available_ports
 
 # consts start #
 software_version = "v1.0"
@@ -12,7 +13,6 @@ software_version = "v1.0"
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
-
 
 # App class end #
 
@@ -32,6 +32,50 @@ app.iconbitmap("images/circuit.ico")
 my_font_normal = customtkinter.CTkFont(family="JetBrains Mono", size=14, weight="normal")
 my_font_bold = customtkinter.CTkFont(family="JetBrains Mono", size=14, weight="bold")
 # app configs end #
+
+
+# funcs and procs start #
+
+
+def button_check_ports_click():
+    ports = find_available_ports()
+    ports_names = []
+    for port in ports:
+        ports_names.append(port.name)
+    ports_names.append('None')
+    combobox_port_name.configure(values=ports_names)
+
+
+def button_config_port_click():
+    print("")
+
+
+def button_specialized_input_click():
+    print("")
+
+
+def button_get_info_click():
+    if button_get_info.cget("text") == "Получить информацию":
+        button_get_info.configure(text="Закончить получать информацию")
+        tabView.configure(state="disabled")
+    else:
+        button_get_info.configure(text="Получить информацию")
+        tabView.configure(state="normal")
+
+
+def button_send_info_click():
+    if button_send_info.cget("text") == "Послать информацию":
+        button_send_info.configure(text="Закончить посылать информацию")
+        tabView.configure(state="disabled")
+    else:
+        button_send_info.configure(text="Послать информацию")
+        tabView.configure(state="normal")
+
+
+def combobox_callback():
+    print("")
+
+# funcs and procs end #
 
 
 # panels config start #
@@ -54,18 +98,21 @@ buttons_label.place(relx=0.5, y=15, anchor=tkinter.CENTER)
 
 button_check_ports = customtkinter.CTkButton(master=buttons_frame,
                                              text="Обновить",
-                                             font=my_font_normal)
+                                             font=my_font_normal,
+                                             command=button_check_ports_click)
 button_check_ports.place(relx=0.5, y=45, anchor=tkinter.CENTER)
 
-button_choose_port = customtkinter.CTkButton(master=buttons_frame,
+button_config_port = customtkinter.CTkButton(master=buttons_frame,
                                              text="Настроить",
-                                             font=my_font_normal)
-button_choose_port.place(relx=0.5, y=85, anchor=tkinter.CENTER)
+                                             font=my_font_normal,
+                                             command=button_config_port_click())
+button_config_port.place(relx=0.5, y=85, anchor=tkinter.CENTER)
 
-button_spec_input = customtkinter.CTkButton(master=buttons_frame,
-                                            text="Спец.ввод",
-                                            font=my_font_normal)
-button_spec_input.place(relx=0.5, y=125, anchor=tkinter.CENTER)
+button_specialized_input = customtkinter.CTkButton(master=buttons_frame,
+                                                   text="Спец.ввод",
+                                                   font=my_font_normal,
+                                                   command=button_specialized_input_click())
+button_specialized_input.place(relx=0.5, y=125, anchor=tkinter.CENTER)
 #       buttons frame end           #
 
 
@@ -94,8 +141,9 @@ option_menu_var = customtkinter.StringVar(value="Нет")
 combobox_port_name = customtkinter.CTkComboBox(master=port_status_frame,
                                                width=100,
                                                values=[],
-                                               variable=option_menu_var)
-combobox_port_name.place(x=90,y=40)
+                                               variable=option_menu_var,
+                                               state="readonly")
+combobox_port_name.place(x=90, y=40)
 
 label_is_port_open = customtkinter.CTkLabel(master=port_status_frame,
                                             text="Доступ к порту: ",
@@ -106,7 +154,7 @@ label_is_port_open.place(x=5, y=70)
 label_port_configs = customtkinter.CTkLabel(master=port_status_frame,
                                             text="Настройки порта",
                                             font=my_font_bold)
-label_port_configs.place(relx=0.5, y=110, anchor=tkinter.CENTER)
+label_port_configs.place(relx=0.5, y=115, anchor=tkinter.CENTER)
 
 label_baudrate = customtkinter.CTkLabel(master=port_status_frame,
                                         text="Скорость: ",
@@ -148,10 +196,16 @@ tabView.place(x=10, y=10)
 tabView.add("Ввод")
 tabView.add("Вывод")
 
-button_get_info = customtkinter.CTkButton(master=tabView.tab("Вывод"), text="Получить информацию", font=my_font_bold)
+button_get_info = customtkinter.CTkButton(master=tabView.tab("Вывод"),
+                                          text="Получить информацию",
+                                          font=my_font_bold,
+                                          command=button_get_info_click)
 button_get_info.place(relx=0.5, rely=0.05, anchor=tkinter.CENTER)
 
-button_send_info = customtkinter.CTkButton(master=tabView.tab("Ввод"), text="Послать информацию", font=my_font_bold)
+button_send_info = customtkinter.CTkButton(master=tabView.tab("Ввод"),
+                                           text="Послать информацию",
+                                           font=my_font_bold,
+                                           command=button_send_info_click)
 button_send_info.place(relx=0.5, rely=0.05, anchor=tkinter.CENTER)
 
 #               textBoxes config start              #
